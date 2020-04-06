@@ -60,7 +60,7 @@
 }
 .button-control {
     height: 30px;
-    width: 60px;
+    width: 52px;
     background-color: green;
     outline: none;
     border-radius: 5px;
@@ -83,19 +83,23 @@
 }
 .button-shift {
     height: 30px;
-    width: 105px;
+    width: 85px;
     background-color: green;
     outline: none;
     border-radius: 5px;
 }
 .button-space {
     height: 30px;
-    width: 340px;
+    width: 296px;
     background-color: green;
     outline: none;
     border-radius: 5px;
 }
 
 .button--active {
+    background-color: yellow;
+}
+
+.button--pressed {
     background-color: yellow;
 }
