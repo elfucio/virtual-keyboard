@@ -23,49 +23,79 @@
     border-radius: 5px;
 }
 
-.button--active {
-    background-color: red;
-}
-
 .button-backspace {
     height: 30px;
     width: 90px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 .button-tab {
     height: 30px;
-    width: 90px;
+    width: 70px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 .button-capslock {
     height: 30px;
     width: 90px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
+}
+.button-del {
+    height: 30px;
+    width: 40px;
+    background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 .button-enter {
     height: 30px;
     width: 90px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 .button-control {
     height: 30px;
     width: 60px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 
 .button-alt {
     height: 30px;
     width: 40px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
+}
+
+.button-win {
+    height: 30px;
+    width: 40px;
+    background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 .button-shift {
     height: 30px;
     width: 105px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 .button-space {
     height: 30px;
     width: 340px;
     background-color: green;
+    outline: none;
+    border-radius: 5px;
 }
 
+.button--active {
+    background-color: yellow;
+}
