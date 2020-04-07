@@ -7,13 +7,11 @@ let Layout = {
     },
 
     init() {
-        // create text and keyboard container
         this.elements.container = document.createElement('div');
         this.elements.info = document.createElement('p');
         this.elements.textField = document.createElement('textarea');
         this.elements.keyboardContainer = document.createElement('div');
 
-        // add classes for text and keyboard container
         this.elements.textField.classList.add('textarea');
         this.elements.info.classList.add('info');
         this.elements.textField.setAttribute('autofocus', '');
@@ -25,17 +23,14 @@ let Layout = {
         На клавиатуре компьютера нажмите Ctrl + Shift или на экранной клавиатуре клик на Alt<br><br>
         Для получения спецсимволов клик на Shift`;
 
-        // get back focus after blur
         this.elements.textField.addEventListener('blur', () => {
             this.elements.textField.focus();
         });
 
-        // add to dom
         document.body.appendChild(this.elements.container);
         this.elements.container.appendChild(this.elements.info);
         this.elements.container.appendChild(this.elements.textField);
 
-        // add text from both keyboards
         document.querySelectorAll('textarea').forEach(element => {
             element.addEventListener('focus', () => {
                 Keyboard.addText(element.value, currentValue => {
@@ -48,14 +43,12 @@ let Layout = {
     },
 
     addKeys() {
-        // add keys to dom
+
         this.elements.keyboardContainer = document.createElement('div');
         this.elements.keyboardContainer.classList.add('keyboard');
         this.elements.container.appendChild(this.elements.keyboardContainer);
         Layout.elements.keyboardContainer.appendChild(Keyboard.createKeys());
 
-
-        // add and remove active class when clicked
         Layout.elements.keyboardContainer.addEventListener('mousedown', (event) => {
             Layout.elements.keyboardContainer.querySelectorAll('button').forEach(element => {
                 if (element.dataset.value == event.target.dataset.value) {
@@ -69,7 +62,6 @@ let Layout = {
             });
         });
 
-        // add and remove active class when pressed
         document.addEventListener('keydown', (event) => {
             Layout.elements.keyboardContainer.querySelectorAll('button').forEach(element => {
                 if (element.dataset.name == event.key || element.dataset.name == event.code) {
@@ -112,7 +104,6 @@ let Keyboard = {
     createKeys() {
         const fragment = document.createDocumentFragment();        
         
-        // create key element
         this.properties.layout.forEach(keyItem => {
             const keyElement = document.createElement('button');
             keyElement.setAttribute('data-name', `${keyItem}`);
@@ -335,7 +326,6 @@ let Keyboard = {
         }
     },
 
-
     addText(initialValue, input) {
         Keyboard.properties.value = initialValue || '';
         Keyboard.events.input = input;
@@ -348,7 +338,7 @@ function switchLanguage(fn, ...codes) {
     document.addEventListener('keydown', function(event) {
       pressed.add(event.key);
 
-      for (let key of codes) { // все ли клавиши из набора нажаты?
+      for (let key of codes) {
         if (!pressed.has(key)) {
           return;
         }
@@ -368,8 +358,6 @@ function switchLanguage(fn, ...codes) {
     "Control"
   );
 
-
-// init when loaded
 window.addEventListener('DOMContentLoaded', function () {
     Layout.init();
     Layout.addKeys();
