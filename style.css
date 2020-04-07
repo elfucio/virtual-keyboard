@@ -1,7 +1,7 @@
 .textarea {
     display: block;
     width: 640px;
-    height: 50px;  
+    height: 100px;  
     margin: 0 auto;
 }
 
@@ -14,92 +14,101 @@
     height: auto;  
     margin: 0 auto;
 }
+button {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #C5C5C5;
+    outline: none;
+    border: 1px solid white;
+}
 
 .button {
-    height: 30px;
+    height: 35px;
     width: 40px;
-    background-color: green;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
+    font-size: 16px;
 }
 
 .button-backspace {
-    height: 30px;
-    width: 90px;
-    background-color: green;
+    height: 35px;
+    width: 82px;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .button-tab {
-    height: 30px;
-    width: 70px;
-    background-color: green;
+    height: 35px;
+    width: 82px;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
+    font-size: 14px;
 }
 .button-capslock {
-    height: 30px;
-    width: 90px;
-    background-color: green;
+    height: 35px;
+    width: 82px;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .button-del {
-    height: 30px;
+    height: 35px;
     width: 40px;
-    background-color: green;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .button-enter {
-    height: 30px;
+    height: 35px;
     width: 90px;
-    background-color: green;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .button-control {
-    height: 30px;
+    height: 35px;
     width: 52px;
-    background-color: green;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .button-alt {
-    height: 30px;
+    height: 35px;
     width: 40px;
-    background-color: green;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .button-win {
-    height: 30px;
+    height: 35px;
     width: 40px;
-    background-color: green;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .button-shift {
-    height: 30px;
-    width: 85px;
-    background-color: green;
+    height: 35px;
+    width: 89px;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 .button-space {
-    height: 30px;
+    height: 35px;
     width: 296px;
-    background-color: green;
+    background-color: #353535;
     outline: none;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 .button--active {
-    background-color: yellow;
+    background-color: #3E1E1E;
 }
 
 .button--pressed {
-    background-color: yellow;
+    background-color: #3E1E1E;
 }
