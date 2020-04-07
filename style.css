@@ -1,8 +1,18 @@
+p {
+    font-family: sans-serif;
+    display: block;
+    width: 640px;
+    height: 100px;  
+    margin: 0 auto;
+    font-size: 14px;
+}
+
 .textarea {
     display: block;
     width: 640px;
     height: 100px;  
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .keyboard {

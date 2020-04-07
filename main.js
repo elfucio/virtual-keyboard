@@ -1,6 +1,7 @@
 let Layout = {
     elements: {
         container: null,
+        info: null,
         textField: null,
         keyboardContainer: null,
     },
@@ -8,13 +9,21 @@ let Layout = {
     init() {
         // create text and keyboard container
         this.elements.container = document.createElement('div');
+        this.elements.info = document.createElement('p');
         this.elements.textField = document.createElement('textarea');
         this.elements.keyboardContainer = document.createElement('div');
 
         // add classes for text and keyboard container
         this.elements.textField.classList.add('textarea');
+        this.elements.info.classList.add('info');
         this.elements.textField.setAttribute('autofocus', '');
         this.elements.keyboardContainer.classList.add('keyboard');
+
+        this.elements.info.innerHTML = 
+        `Windows OS<br>
+        Переключение языка в виртуальной клавиатуре:<br>
+        На клавиатуре компьютера нажмите Ctrl + Shift или на экранной клавиатуре клик на Alt<br><br>
+        Для получения спецсимволов клик на Shift`;
 
         // get back focus after blur
         this.elements.textField.addEventListener('blur', () => {
@@ -23,6 +32,7 @@ let Layout = {
 
         // add to dom
         document.body.appendChild(this.elements.container);
+        this.elements.container.appendChild(this.elements.info);
         this.elements.container.appendChild(this.elements.textField);
 
         // add text from both keyboards
