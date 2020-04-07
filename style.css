@@ -24,12 +24,22 @@ p {
     height: auto;  
     margin: 0 auto;
 }
+
 button {
     font-size: 12px;
     font-family: sans-serif;
     color: #C5C5C5;
     outline: none;
     border: 1px solid white;
+}
+
+button:active {
+    box-shadow:
+    0 5px rgba(54, 52, 52, 0.2),
+    0 1px 6px rgba(0,0,0,.4),
+    inset 0 1px rgba(255,255,255,.3),
+    inset 0 0 2px rgba(255,255,255,.5);
+   transform: translate(0, 2px);
 }
 
 .button {
