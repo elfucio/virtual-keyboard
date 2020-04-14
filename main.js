@@ -64,6 +64,9 @@ const Layout = {
         if (element.dataset.name === event.key || element.dataset.name === event.code) {
           element.classList.add('button--active');
         }
+        if (element.dataset.uppercase === event.key || element.dataset.uppercase === event.code) {
+          element.classList.add('button--active');
+        }
       });
     });
     document.addEventListener('keyup', () => {
@@ -104,6 +107,7 @@ const Keyboard = {
     this.properties.layout.forEach((keyItem) => {
       const keyElement = document.createElement('button');
       keyElement.setAttribute('data-name', `${keyItem}`);
+      keyElement.setAttribute('data-uppercase', `${keyItem.toUpperCase()}`);
 
       switch (keyItem) {
         case 'Backspace':
